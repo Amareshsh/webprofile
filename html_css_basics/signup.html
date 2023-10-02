@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Sign up</h1>
+        <form>
+            <div>
+                <label for="user_first_name">First Name</label><br/>
+                <input type="text" id="user_first_name" name="user_first_name" required minlength="5">
+            </div>
+            <div>
+                <label for="user_last_name">Last Name</label><br/>
+                <input type="text" id="user_last_name" name="user_last_name" required minlength="5">
+            </div>
+            <div>
+                <label for="user_email">Email</label><br/>
+                <input type="email" id="user_email" name="user_email" required minlength="3">
+            </div>
+            <div>
+                <label for="user_password">Password</label><br/>
+                <input type="password" id="user_password" name="user_password">
+            </div>
+            <div>
+                <label for="confirm_password">Confirm Password</label><br/>
+                <input type="confirm password" id="confirm_password" name="confirm_password"> 
+            </div>
+            <br/>
+            <div>
+                <button type="submit">Sign up</button> <br/>
+            </div>
+            <br/>
+        </form>
+
+        <h2>Booking Table Type</h2>
+        <form method="POST">
+            <fieldset id="size">
+                <label>
+                    <input type="radio" value="2" name="size"> 2-person table
+                </label>
+                <label>
+                    <input type="radio" value="4" name="size" checked> 4-person table
+                </label>
+                <label>
+                    <input type="radio" value="6" name="size"> 6-person table
+                </label>
+            </fieldset>
+            <fieldset id="location">
+                <label>
+                    <input type="radio" value="indoor" name="location" checked> Indoors
+                </label>
+                <label>
+                    <input type="radio" value="outdoors" name="location"> Outdoors
+                </label>
+            </fieldset> <br/>
+            <button type="submit">Book table for me!</button>
+        </form><br/>
+
+        <h2>Bookwith location type</h2>
+        <div>
+            <label for="booking_people"> Number of people</label>
+            <input type="range" id="booking_people" name="booking_people" min="1" max="9">
+            <output>4</output>
+        </div>
+
+        <div>
+            <label for="booking_location"> Location</label>
+            <input type="booking_location" id="booking_location" list="locations">
+            <datalist id="locations">
+                <option value="Bangalore"></option>
+                <option value="Hyderabad"></option>
+            </datalist>
+        </div>
+    </main>
+</body>
+</html>
